@@ -1,0 +1,233 @@
+#include <iostream>
+using namespace std;
+
+class Trasport {
+	int age;
+public:
+	void SetAge(int age) {
+		if (age < 0 || age > 126) this->age = 18;
+		else this->age = age;
+	}
+	int GetAge() const {
+		return age;
+	}
+	Trasport() {
+		age = 5;
+	}
+	Trasport(string name, int age) {
+		SetAge(age);
+	}
+	void Print() const {
+		cout << "Age: " << age <<"year" "\n";
+	}
+};
+
+class Car : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	Car() {
+		name_of_transport = "Car";
+		max_speed = 130;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+class Taxi : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	Taxi() {
+		name_of_transport = "Taxi";
+		max_speed = 65;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+class Tram : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	Tram() {
+		name_of_transport = "Tram";
+		max_speed = 30;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+class Trolleybus : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	Trolleybus() {
+		name_of_transport = "Trolleybus";
+		max_speed = 16;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+class Minibus : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	Minibus() {
+		name_of_transport = "Minibus";
+		max_speed = 60;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+class ElectricScooter : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	ElectricScooter() {
+		name_of_transport = "ElectricScooter";
+		max_speed = 20;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+class Train : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	Train() {
+		name_of_transport = "Train";
+		max_speed = 200;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+class Airplane : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	Airplane() {
+		name_of_transport = "Airplane";
+		max_speed = 800;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+class Bicycle : public Trasport {
+	double max_speed;
+	string name_of_transport;
+	double distance;
+	double time;
+public:
+	Bicycle() {
+		name_of_transport = "Bicycle";
+		max_speed = 25;
+		distance = 670;
+	}
+	void Print() const {
+		Trasport::Print();
+		cout << "Name: " << name_of_transport << "\n";
+		cout << "Max speed: " << max_speed << "Km/h" "\n";
+		cout << "Distance: " << distance << "Km" "\n";
+		cout << "An hours drive from Odessa to Kharkov:" << distance / max_speed << "h" "\n";
+
+	}
+};
+int main() {
+	Taxi t;
+	Car c;
+	Tram tr;
+	Trolleybus tro;
+	Minibus m;
+	ElectricScooter e;
+	Train tra;
+	Airplane a;
+	Bicycle b;
+	c.Print();
+	cout << "\n";
+	t.Print();
+	cout << "\n";
+	tr.Print();
+	cout << "\n";
+	tro.Print();
+	cout << "\n";
+	m.Print();
+	cout << "\n";
+	e.Print();
+	cout << "\n";
+	tra.Print();
+	cout << "\n";
+	a.Print();
+	cout << "\n";
+	b.Print();
+
+}
